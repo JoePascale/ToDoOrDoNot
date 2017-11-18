@@ -8,13 +8,6 @@ Bundler.require(*Rails.groups)
 
 module ToDoOrDoNot
   class Application < Rails::Application
-
-    #replaces all constant mentions of FactoryGirl with FactoryBot
-    grep -e FactoryGirl **/*.rake **/*.rb -l | xargs sed -i "" "s|FactoryGirl|FactoryBot|"
-
-    #replaces all path mentions of FactoryGirl with FactoryBot
-    grep -e factory_girl **/*.rake **/*.rb -l | xargs sed -i "" "s|factory_girl|factory_bot|"
-
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
