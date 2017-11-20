@@ -1,2 +1,4 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>My Profile Page</h1>
+<p>(Users#show)</p>
+
+<p>Last signed in: <%= current_user.last_sign_in_at.to_s(:short) %></p>
