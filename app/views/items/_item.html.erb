@@ -1,1 +1,10 @@
-test
+<div class="media">
+  <div class="media-body">
+    <h4 class="media-heading">
+      <% @item %>
+    </h4>
+    <small>
+      Created <%= time_ago_in_words(@item.created_at) %> ago
+    </small>
+  </div>
+</div>

@@ -1,9 +1,9 @@
-<h1>My Profile Page</h1>
+<h1>My To-Do Tasks</h1>
 
 <p>Last signed in: <%= current_user.last_sign_in_at.to_s(:short) %></p>
 
-<%# render './items/form' %>
+<%= render 'items/form' %>
 
-<%# @items.each do |i| %>
-  <%# render 'item' %>
-<%# end %>
+<% @items.each do |item| %>
+  <%= render 'items/item' %>
+<% end %>
