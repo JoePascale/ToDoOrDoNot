@@ -2,6 +2,7 @@
   <div class="media-body">
     <h4 class="media-heading">
       <%= item.name.capitalize! %>
+      <%= link_to "", item, :remote => true, method: :delete, class: 'glyphicon glyphicon-ok' %>
     </h4>
     <small>
       Created <%= time_ago_in_words(item.created_at) %> ago

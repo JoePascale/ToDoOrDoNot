@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  respond_to :html, :js
+
   def create
     @item = current_user.items.new(item_params)
     if @item.save
@@ -6,6 +8,12 @@ class ItemsController < ApplicationController
     else
       flash.now[:alert] = "There was an error saving your new To-Do item."
     end
+    redirect_to root_path
+  end
+
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
     redirect_to root_path
   end
 

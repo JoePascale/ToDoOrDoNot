@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   authenticated :user do
     root 'users#show', as: :authenticated_root
-    resources :items, only: [:create]
+    resources :items, only: [:create, :destroy]
   end
 
   root 'welcome#index'
