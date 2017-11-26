@@ -5,7 +5,8 @@
       <%= link_to "", item, :remote => true, method: :delete, class: 'glyphicon glyphicon-ok' %>
     </h4>
     <small>
-      Created <%= time_ago_in_words(item.created_at) %> ago
+      Created <%= time_ago_in_words(item.created_at) %> ago |
+      Time Remaining to Complete: <%= distance_of_time_in_words(item.created_at, item.created_at + 7.days) %>
     </small>
   </div>
 </div>
