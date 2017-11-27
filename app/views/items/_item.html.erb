@@ -6,7 +6,7 @@
     </h4>
     <small>
       Created <%= time_ago_in_words(item.created_at) %> ago |
-      Time Remaining to Complete: <%= distance_of_time_in_words(item.created_at, item.created_at + 7.days) %>
+      Time Remaining to Complete: <%= distance_of_time_in_words(item.created_at + 7.days, Time.now) %>
     </small>
   </div>
 </div>
