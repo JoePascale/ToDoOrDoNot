@@ -6,16 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 50.times do
-  User.create([{
+  User.create(
     email: Faker::Internet.email,
     password: Faker::Internet.password,
-  }])
+    confirmed_at: Time.now
+  )
 end
 users = User.all
 
 50.times do
-  Item.create([{
+  Item.create(
     name: Faker::Lorem.word,
     user: users.sample
-  }])
+  )
 end
